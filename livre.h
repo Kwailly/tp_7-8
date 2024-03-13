@@ -22,7 +22,7 @@ typedef int T_annee;
 
 
 // à utiliser pour gérer l'emprunt d'un livre
-/*
+
 typedef enum T_Jour {lu,ma,me,je,ve,sa,di};
 typedef enum T_Mois {janv,fevr,mars,avri,mai,juin,juil,aout,sept,octo,nove,dece};
 
@@ -34,7 +34,7 @@ int ledate;
 T_Mois lemois;
 int lannee
 }T_Emp ;
-*/
+
 
 
 // debut de TP, on utilisera les 2 champs titre et auteur
@@ -46,8 +46,8 @@ typedef struct
 // Attention il peut y avoir pluieurs livres de même titre (le code diffèrent dans ce cas)
 T_Titre titre; // Titre du livre
 T_Aut auteur; // Nom de l'auteur
-//T_Edit editeur; // Nom de l'editeur
-//T_annee annee; // Annee de l'edition
+T_Edit editeur; // Nom de l'editeur
+T_annee annee; // Annee de l'edition
 //T_Emp emprunteur; // Nom de l'emprunteur et date d'emprunt
 }  T_livre;
 
