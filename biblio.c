@@ -121,13 +121,58 @@ int rendreUnLivre(T_Bibliotheque *ptrB, T_Titre nomLivre){
 }
 
 
-int triTitre(T_Bibliotheque *ptrB){
+void triTitre(T_Bibliotheque *ptrB){
     T_livre aux;
     int i;
-    for(i=0 ;i < ptrB->nbLivres;i++){
-        if(strcmp(ptrB->etagere[i].titre ,ptrB->etagere[i+1].titre))
-
+    int modif=1;
+    while(modif==1){
+        modif=0;
+        for(i=0 ;i < (ptrB->nbLivres-1) ;i++)
+            if(strcmp(ptrB->etagere[i].titre ,ptrB->etagere[i+1].titre)>0){
+                aux = ptrB->etagere[i] ;
+                ptrB->etagere[i] = ptrB->etagere[i+1] ;
+                ptrB->etagere[i+1] = aux ;
+                modif=1;
+            }
     }
 
 }
+
+            
+void triAuteur(T_Bibliotheque *ptrB){
+    T_livre aux;
+    int i;
+    int modif=1;
+    while(modif==1){
+        modif=0;
+        for(i=0 ;i < (ptrB->nbLivres-1) ;i++)
+            if(strcmp(ptrB->etagere[i].auteur ,ptrB->etagere[i+1].auteur)>0){
+                aux = ptrB->etagere[i] ;
+                ptrB->etagere[i] = ptrB->etagere[i+1] ;
+                ptrB->etagere[i+1] = aux ;
+                modif=1;
+            }
+    }
+
+}
+void triAnnee(T_Bibliotheque *ptrB){
+    T_livre aux;
+    int i;
+    int modif=1;
+    while(modif==1){
+        modif=0;
+        for(i=0 ;i < (ptrB->nbLivres-1) ;i++)
+            if(ptrB->etagere[i].annee > ptrB->etagere[i+1].annee){
+                aux = ptrB->etagere[i] ;
+                ptrB->etagere[i] = ptrB->etagere[i+1] ;
+                ptrB->etagere[i+1] = aux ;
+                modif=1;
+            }
+    }
+
+}
+
+    
+
+
 

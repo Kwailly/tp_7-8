@@ -25,6 +25,10 @@ int  afficherBibliotheque(const T_Bibliotheque  *ptrB);
 int rechercheLivre(const T_Bibliotheque  *ptrB, T_Titre nomLivre);
 int rechercheAuteur(const T_Bibliotheque  *ptrB, T_Aut nomAut);
 int supprimerLivre(T_Bibliotheque  *ptrB, T_Titre nomLivre);
-
+int emprunterLivre(T_Bibliotheque *ptrB, T_Titre nomLivre, T_Emp emp);
+int rendreUnLivre(T_Bibliotheque *ptrB, T_Titre nomLivre);
+void triTitre(T_Bibliotheque *ptrB);
+void triAuteur(T_Bibliotheque *ptrB);
+void triAnnee(T_Bibliotheque *ptrB);
 
 #endif

@@ -96,6 +96,7 @@ int reponse,chx;
 T_Bibliotheque B; 
 init( &B );
 chargement(&B);
+T_Emp emp;
 do
 {
 chx= menu();
@@ -142,6 +143,40 @@ switch(chx)
 				
 			break;
 	
+	case  6 :
+	lireChaine("saisissez le titre a emprunter :",nom,MAX_TITRE);
+	lireChaine("saisissez votre nom :",emp, MAX);
+	reponse = emprunterLivre( &B , nom, emp );
+				if(reponse==-1) printf("livre inconnu !! ");
+				if (reponse==0){
+					printf("livre deja emprunter !! ");}
+				else
+					printf("reussi !!");
+				
+			break;
+	case  7 :
+	lireChaine("saisissez le titre a rendre :",nom,MAX_TITRE);
+	reponse = rendreUnLivre( &B , nom);
+				if(reponse==-1) printf("livre inconnu !! ");
+				
+				if (reponse==0){
+					printf("livre pas encore emprunter !! ");}
+				if (reponse==1)
+					printf("livre rendu !!");
+				
+			break;
+	case  8 :
+	triTitre(&B);
+	printf("trie realiser");
+	break;
+	case  9 :
+	triAuteur(&B);
+	printf("trie realiser");
+	break;
+	case  10 :
+	triAnnee(&B);
+	printf("trie realiser");
+	break;
 	
 	}
 }while(chx!=0);

@@ -10,6 +10,7 @@ lireChaine("EDITEUR :", (ptrL->editeur ), MAX);
 printf("ANNEE : ");
 scanf("%d",&annee);
 ptrL->annee=annee;
+strcpy (ptrL->emprunteur.nomemprunteur ,"");
 }
 
 void afficherLivre(const T_livre *ptrL)
@@ -21,6 +22,8 @@ printf(" - ");
 afficherChaine("EDITEUR :", (ptrL->editeur ));
 printf(" - ");
 printf("ANNEE : %d",ptrL->annee);
+printf(" - ");
+printf("EMPRUNTEUR : %s",ptrL->emprunteur);
 printf("\n");
 }
 
