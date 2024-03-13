@@ -30,5 +30,5 @@ int rendreUnLivre(T_Bibliotheque *ptrB, T_Titre nomLivre);
 void triTitre(T_Bibliotheque *ptrB);
 void triAuteur(T_Bibliotheque *ptrB);
 void triAnnee(T_Bibliotheque *ptrB);
-
+void lireDateSysteme(T_Emp *E);
 #endif

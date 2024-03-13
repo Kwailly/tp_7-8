@@ -96,7 +96,7 @@ int reponse,chx;
 T_Bibliotheque B; 
 init( &B );
 chargement(&B);
-T_Emp emp;
+T_Aut emp;
 do
 {
 chx= menu();

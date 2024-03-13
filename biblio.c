@@ -92,9 +92,11 @@ int emprunterLivre(T_Bibliotheque *ptrB, T_Titre nomLivre, T_Emp emp) {
     int position = rechercheLivre(ptrB, nomLivre);
     if (position == -1)return -1;
 
-    if (strcmp("" , ptrB->etagere[position].emprunteur)==0) {
+    if (strcmp("" , ptrB->etagere[position].emprunteur.nomemprunteur)==0) {
         
-        strcpy(ptrB->etagere[position].emprunteur ,emp );
+        lireDateSysteme(emp);
+
+        //strcpy(ptrB->etagere[position].emprunteur ,emp );
         return 1; 
 
     } else {
@@ -107,11 +109,11 @@ int emprunterLivre(T_Bibliotheque *ptrB, T_Titre nomLivre, T_Emp emp) {
 int rendreUnLivre(T_Bibliotheque *ptrB, T_Titre nomLivre){
 
     int position = rechercheLivre(ptrB, nomLivre);
-    if (strcmp("" , ptrB->etagere[position].emprunteur)==0) return 0;
+    if (strcmp("" , ptrB->etagere[position].emprunteur.nomemprunteur)==0) return 0;
 
     if (position != -1 ) {
         
-        strcpy(ptrB->etagere[position].emprunteur , "" );
+        strcpy(ptrB->etagere[position].emprunteur.nomemprunteur , "" );
         return 1; 
 
     } else {

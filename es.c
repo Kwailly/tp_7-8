@@ -76,42 +76,28 @@ if (fic!=NULL)
 		}
 	fclose(fic);
 	
-if (strcmp(j,"Mon")==0) E->lejour=lundi;
-if (strcmp(j,"Tue")==0) E->lejour=mardi;
-if (strcmp(j,"Wed")==0) E->lejour=mercredi;
-if (strcmp(j,"Thu")==0) E->lejour=jeudi;
-if (strcmp(j,"Fri")==0) E->lejour=vendredi;
-if (strcmp(j,"Sat")==0) E->lejour=samedi;
-if (strcmp(j,"Sun")==0) E->lejour=dimanche;
+if (strcmp(j,"Mon")==0) E->lejour=lu;
+if (strcmp(j,"Tue")==0) E->lejour=ma;
+if (strcmp(j,"Wed")==0) E->lejour=me;
+if (strcmp(j,"Thu")==0) E->lejour=je;
+if (strcmp(j,"Fri")==0) E->lejour=ve;
+if (strcmp(j,"Sat")==0) E->lejour=sa;
+if (strcmp(j,"Sun")==0) E->lejour=di;
 
 E->ladate=d;
 
-if (strcmp(m,"Jan")==0) E->lemois=janvier;
-if (strcmp(m,"fevrier")==0) E->lemois=fevrier;
+if (strcmp(m,"Jan")==0) E->lemois=janv;
+if (strcmp(m,"fevrier")==0) E->lemois=fevr;
 if (strcmp(m,"mars")==0) E->lemois=mars;
-if (strcmp(m,"avril")==0) E->lemois=avril;
+if (strcmp(m,"avril")==0) E->lemois=avri;
 if (strcmp(m,"mai")==0) E->lemois=mai;
 if (strcmp(m,"juin")==0) E->lemois=juin;
-if (strcmp(m,"juillet")==0) E->lemois=juillet;
+if (strcmp(m,"juillet")==0) E->lemois=juil;
 if (strcmp(m,"aout")==0) E->lemois=aout;
-if (strcmp(m,"septembre")==0) E->lemois=septembre;
-if (strcmp(m,"octobre")==0) E->lemois=octobre;
-if (strcmp(m,"novembre")==0) E->lemois=novembre;
-if (strcmp(m,"decembre")==0) E->lemois=decembre;
-
-
-E->lannee=a;
-	}
-	else
-	{
-		printf("n souci avec la date systeme !!");
-		//on range une date irréelle 
-		E->lejour=dimanche;
-		E->ladate=99;
-		E->lemois=decembre;
-		E->lannee=-999;
-
+if (strcmp(m,"septembre")==0) E->lemois=sept;
+if (strcmp(m,"octobre")==0) E->lemois=octo;
+if (strcmp(m,"novembre")==0) E->lemois=nove;
+if (strcmp(m,"decembre")==0) E->lemois=dece;
 
 	}
-
 }
